@@ -10,7 +10,7 @@ if( !function_exists('bt_setup')) :
         wp_enqueue_style('bt-style', get_stylesheet_uri());
 
         //enqueue scripts
-        wp_enqueue_script('dance-main', get_template_directory_uri() . '/js/main.js');
+        wp_enqueue_script('bt-main', get_template_directory_uri() . '../assets/js/main.js');
 
         /*
             * add theme support
@@ -29,8 +29,10 @@ if( !function_exists('bt_setup')) :
 
         // register menus
         register_nav_menus(array(
-            'primary-menu' => _('Primary')
+            'primary-menu' => _('Primary'),
+            'footer-menu' => _('Footer'),
+            'social-menu' => _('Social')
         ));
     }
 endif ;
-add_action('after-setup_theme', 'bt-setup');
+add_action('after-setup_theme', 'bt_setup');

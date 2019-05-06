@@ -15,7 +15,7 @@
 
 <header>
     <nav>
-        <?php wp_nav_menu() ?>
+        <?php wp_nav_menu(array('menu_id' => 'Primary')); ?>
     </nav>
     <section>
         <div>
