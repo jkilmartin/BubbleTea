@@ -23,9 +23,9 @@ if( !function_exists('bt_setup')) :
 
         // register menus
         register_nav_menus(array(
-            'primary-menu' => _('Primary'),
-            'footer-menu' => _('Footer'),
-            'social-menu' => _('Social')
+            'primary-menu' => __('Primary'),
+            'footer-menu' => __('Footer'),
+            'social-menu' => __('Social')
         ));
     }
 endif ;
