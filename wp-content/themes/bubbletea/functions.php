@@ -40,6 +40,11 @@ if ( !function_exists('bt_enqueue_scripts')) :
         
                 //enqueue scripts
                 wp_enqueue_script('bt-main', get_template_directory_uri() . '../assets/js/main.js');
+
+                    // responsive nav css import
+    wp_enqueue_style('edt-style-responsive-nav', get_template_directory_uri() . '/assets/css/responsive-nav.css');
+    // responsive nav js import
+    wp_enqueue_script('edt-script-responsive-nav', get_template_directory_uri() .'/assets/js/responsive-nav.min.js');
     }
 endif ;
 add_action('wp_enqueue_scripts', 'bt_enqueue_scripts');

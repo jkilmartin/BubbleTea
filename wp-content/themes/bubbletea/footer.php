@@ -13,8 +13,6 @@
     Copyright <?php echo date('Y'); ?>
 </footer>
     <?php wp_footer(); ?>
-    <script>
-        var nav = responsiveNav(".nav-collapse");
-    </script>
+    <script> var nav = responsiveNav(".nav-collapse"); </script>
 </body>
 </html>
