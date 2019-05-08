@@ -23,9 +23,9 @@ if( !function_exists('bt_setup')) :
 
         // register menus
         register_nav_menus(array(
-            'primary-menu' => _('Primary'),
-            'footer-menu' => _('Footer'),
-            'social-menu' => _('Social')
+            'primary-menu' => __('Primary'),
+            'footer-menu' => __('Footer'),
+            'social-menu' => __('Social')
         ));
     }
 endif ;
@@ -55,3 +55,23 @@ if ( !function_exists('bt_widgets_init')) :
     }
 endif ;
 add_action('widgets_init', 'bt_widgets_init');
+
+if (!function_exists('bt_create_post_types')) :
+    function bt_create_post_types()
+    {
+        register_post_type(
+            'bt_flavours',
+            array('labels' => array(
+                'name' => __('bt-flavours'),
+                'singular_name' => __('bt-flavour')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'menu_position' => 5,
+            'supports' => array('title', 'editor', 'thumbnail')
+            )
+        );
+    }
+endif;
+add_action('init', 'bt_create_post_types');
+  
