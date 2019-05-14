@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="main.css" /> -->
     <link rel="stylesheet" href="responsive-nav.css">
     <script src="responsive-nav.js"></script>
     <script src="main.js"></script>
@@ -14,7 +14,7 @@
 <body <?php body_class() ?>> 
 
 <header>
-    <nav>
+    <nav class="navbar">
         <?php wp_nav_menu(array('menu_id' => 'Primary')); ?>
     </nav>
     <section>
